@@ -2,7 +2,7 @@
 #where users can go to
 #anything not related to authentication but can navigate to
 
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 #Blueprint - has a bunch of organized routes
 views = Blueprint('views', __name__)
@@ -11,5 +11,5 @@ views = Blueprint('views', __name__)
 @views.route('/')
 def home(): 
   #this function runs when route url is entered
-  return "<h1> Hello World </h1>"
+  return render_template('home.html')
 
