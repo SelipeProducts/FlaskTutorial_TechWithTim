@@ -20,5 +20,5 @@ class User(db.Model, UserMixin):
   firstname = db.Column(db.String(150))
 
   #each time user make note. Note is added to list
-  note = db.relationship('Notes')
+  notes = db.relationship('Note')
 
