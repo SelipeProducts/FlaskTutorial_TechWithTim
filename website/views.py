@@ -31,7 +31,7 @@ def home():
   return render_template('home.html', user=current_user)
 
 
-@views.route('/delete-note', methods=['POST'])
+@views.route('/delete-note', methods=['GET','POST'])
 def delete_note():
   note = json.load(request.data)
   noteId = note['noteId']
@@ -42,3 +42,14 @@ def delete_note():
       db.session.delete(note)
       db.session.commit()
       return jsonify({})
+  
+  # if request.method == 'POST':
+  #   note = request.form.get('delete-note')
+  #   print("Note Data: ")
+  #   print(note)
+  #   #db.session.delete(note)
+  #   #db.session.commit()
+
+  return render_template('home.html', user=current_user)
+
+    

@@ -10,6 +10,14 @@
       <button type='button' class='close' onClick="deleteNote({{ note.id }})">
         <span aria-hidden='true'> &times; </span>
       </button>
+      <!-- Fetch alt solution
+      <form action="/delete-note/" method="POST">
+        <button type="submit" class='close' id='delete-note' name='delete-note'>
+        <span aria-hidden='true'> &times; </span>
+        </button>
+      </form>
+
+      -->
 
     </li>
     {%endfor%}

@@ -43,7 +43,6 @@ def create_app():
   def load_user(id):
     return User.query.get(int(id))
   
-
   return app
 
 def create_database(app):
